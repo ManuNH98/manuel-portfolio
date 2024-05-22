@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import vercel from '@astrojs/vercel/static';
+import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
     output: 'static',
@@ -8,4 +9,5 @@ export default defineConfig({
             enabled: true,
         },
     }),
+    integrations: [tailwind()],
 });
